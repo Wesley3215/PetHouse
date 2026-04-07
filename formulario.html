@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet House</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h1>Pet House</h1>
+
+        <nav>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Início</a>
+            <a href="adocao.html"><i class="fa-solid fa-paw"></i> Adoção</a>
+            <!--<a href="#"><i class="fa-solid fa-circle-info"></i> Sobre</a> -->
+            <a href="curiosidades.html"><i class="fa-solid fa-lightbulb"></i> Curiosidades</a>
+            <a href="guia.html"><i class="fa-solid fa-book"></i> Guia</a>
+        </nav>
+    </aside>
+
+    <main class = "content">
+        <!--Trocar a imagem daqui mais para frente-->
+        <section class="banner">
+            <img src="img/CaoeGato.jpg">
+            <h2>Espalhando Amor E Carinho Por Cada Patinha</h2>
+        </section>
+
+        <section class="formulario">
+            <h2>Cadastro para Adoção</h2>
+
+            <form>
+
+                <label>Nome completo</label>
+                <input type="text" required>
+
+                <label>Idade</label>
+                <input type="number" min="18" required>
+
+                <label>Documento (RG ou CNH)</label>
+                <input type="text" required>
+
+                <label>Endereço completo</label>
+                <input type="text" required>
+
+                <label>Comprovante de residência</label>
+                <input type="file" required>
+
+                <label>Você já teve pets antes?</label>
+                <select required>
+                    <option value="">Selecione</option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
+
+                <label>Descreva sua experiência com pets (se houver)</label>
+                <textarea rows="3"></textarea>
+
+                <label>Você concorda com visita ou entrevista?</label>
+                <select required>
+                    <option value="">Selecione</option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
+
+                <label>Declara que não possui histórico de maus-tratos?</label>
+                <select required>
+                    <option value="">Selecione</option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
+
+                <label>Por que deseja adotar um pet?</label>
+                <textarea rows="4" required></textarea>
+
+                <label class="checkbox">
+                    <input type="checkbox" required>
+                    Estou ciente de que a adoção pode ser recusada após análise
+                </label>
+
+                <label class="checkbox">
+                    <input type="checkbox" required>
+                    Concordo em assinar o termo de responsabilidade
+                </label>
+
+                <button type="submit">Enviar Cadastro</button>
+
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,640 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*corpo geral*/
+body {
+  display: flex;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+.sidebar {
+    width: 450px;
+    min-height: 100vh;
+    background:  #1f7a2e;
+    color:white;
+    padding: 20px;
+}
+
+.sidebar h1{
+    margin-bottom: 20px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.sidebar nav a i {
+  font-size: 35px;
+}
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+
+  transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+  background: #b8e6a3;
+  color: #1f7a2e;
+  transform: translateX(6px);
+}
+
+.content {
+  margin-left: 250px;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: calc(100% - 250px); /* 🔥 ocupa o resto da tela */
+}
+
+
+.banner {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.banner img {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.banner h2 {
+  margin-top: 15px;
+  color: #1f7a2e;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.card {
+  background: rgba(184, 230, 163, 0.7); /* leve transparência */
+  padding: 25px;
+  text-align: center;
+  border-radius: 20px;
+
+  font-size: 30px;
+  font-weight: bold;
+
+  /* efeito vidro */
+  backdrop-filter: blur(10px);
+
+  /* sombra suave */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+  transition: 0.3s;
+}
+
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.card span {
+  display: block;
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: normal;
+  color: #2e5e2e;
+}
+
+.card i {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #1f7a2e;
+}
+
+.proposito {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.proposito h2 {
+  color: #1f7a2e;
+  margin-bottom: 10px;
+  font-size: 35px;
+  margin-top: 20px;
+}
+
+
+.proposito p {
+  text-align: justify;
+  line-height: 1.7;
+  font-size: 20px;
+}
+
+.quem-somos {
+  text-align: center;
+  margin-top: 60px;
+  color: #1f7a2e;
+  font-size: 35px;
+}
+
+.quem-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.quem-card {
+  max-width: 300px;
+  text-align: left;
+}
+
+.quem-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  object-position: 50% 35%; 
+  margin-bottom: 10px;
+}
+
+.quem-card p {
+  font-size: 20px;
+  color: #555;
+  line-height: 1.6;
+}
+.projeto {
+  margin-top: 60px;
+  height: 300px;
+
+  background-image: url("img/dog-final.jpg"); /* sua imagem do cachorro */
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  text-align: center;
+}
+.projeto-texto {
+  background: rgba(0, 0, 0, 0.4); /* escurece fundo */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.projeto-texto h2 {
+  margin-bottom: 10px;
+}
+
+.projeto-texto button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #1f7a2e;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.projeto-texto button:hover {
+  background: #145a22;
+}
+
+.final {
+  text-align: center;
+  margin-top: 60px;
+  max-width: 800px;
+}
+
+.final h2 {
+  color: #1f7a2e;
+  margin-bottom: 15px;
+  font-size: 35px;
+}
+
+.final p {
+  color: #666;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.final-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.final-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.final-card {
+  background: #3d4f0f;
+  color: #c8ff9e;
+
+  width: 120px;
+  height: 120px;
+
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s;
+}
+
+.final-card:hover {
+  transform: translateY(-5px);
+  background: #1f7a2e;
+}
+
+.final-card i {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.final-card span {
+  font-size: 12px;
+  text-align: center;
+}
+
+.projeto-final img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: 50% 40%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.requisitos-adocao {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.requisitos-adocao img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position:50% 60%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.requisitos-adocao h1 {
+  color: #1f7a2e;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.requisitos,
+.condicoes,
+.compromisso {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.requisitos h2,
+.condicoes h2,
+.compromisso h2 {
+  color: #1f7a2e;
+  margin-bottom: 10px;
+}
+.container-processo {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-processo {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 20px;
+  max-width: 400px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.processo-adocao h2{
+  color: #1f7a2e;
+  font-size: 35px;
+  text-align: center;
+}
+.card-processo img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.card-processo img.img-top {
+    object-position: top; /* imagem fica “grudada” no topo */
+}
+
+.card-processo img.img-center {
+    object-position: 50% 60%; /* centraliza melhor */
+}
+
+.btn-adotar {
+  display: inline-block;
+  margin: 30px auto;
+  padding: 15px 30px;
+
+  background: #1f7a2e;
+  color: white;
+
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+
+  border-radius: 10px;
+  transition: 0.3s;
+
+  text-align: center;
+}
+
+.btn-adotar:hover {
+  background: #145a22;
+  transform: scale(1.05);
+}
+.btn-adotar {
+  display: block;
+  width: fit-content;
+}
+
+/* ===== FORMULÁRIO ===== */
+.formulario {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* título */
+.formulario h2 {
+  text-align: center;
+  color: #1f7a2e;
+  margin-bottom: 20px;
+}
+
+/* organiza os campos */
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* labels */
+.formulario label {
+  font-weight: 600;
+  color: #333;
+}
+
+/* inputs */
+.formulario input,
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+
+  border-radius: 8px;
+  border: 1px solid #ccc;
+
+  font-size: 14px;
+}
+
+/* textarea */
+.formulario textarea {
+  resize: none;
+}
+
+/* checkbox alinhado */
+.formulario .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.formulario .checkbox input {
+  width: auto;
+}
+
+/* botão */
+.formulario button {
+  margin-top: 15px;
+  padding: 12px;
+
+  background: #1f7a2e;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  font-size: 16px;
+
+  transition: 0.3s;
+}
+
+.formulario button:hover {
+  background: #145a22;
+}
+
+.explicacao {
+    background: #ffffff; 
+    border-radius: 15px;
+    padding: 25px 30px;
+    max-width: 900px;
+    margin: 0 auto 40px auto; /* centraliza e dá espaçamento embaixo */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    line-height: 1.6;
+    color: #1f7a2e;
+}
+
+.explicacao h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.explicacao p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+
+.banner img {
+    width: 50vw;       
+    max-width: none;   
+    height: 400px;     
+    object-fit: cover;
+    object-position:50% 60%;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+
+.accordion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.accordion-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-header {
+    background-color: #1f7a2e;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #fafafa;
+    padding: 0 15px;
+}
+
+.accordion-header:hover {
+    background-color: #1f7a2e;
+}
+
+.accordion-content p {
+    margin: 10px 0;
+    font-size: 17px;
+    line-height: 1.4;
+}
+/* ===== AO ABRIR ===== */
+.accordion-item.active .accordion-content {
+    max-height: 500px;
+    padding: 15px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 quadrados fixos por linha */
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* ===== BANNER ===== */
+.banner img {
+    width: 50vw;       
+    max-width: none;   
+    height: 400px;     
+    object-fit: cover;
+    object-position:50% 60%;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+/* ===== PLANOS ===== */
+.planos {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.planos h2 {
+    color: #1f7a2e;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.planos p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+/* ===== CANTINHO ===== */
+.cantinho {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.cantinho h2 {
+    color: #1f7a2e;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.cantinho p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 20px;
+    margin-bottom: 35px;
+    text-align: justify;
+}
